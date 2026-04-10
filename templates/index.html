@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Tuta Wayta – Inicio{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero" style="padding: 100px 20px 110px;">
+  <div class="hero-content">
+    <h1 style="font-size: clamp(2rem,6vw,4.5rem);">Pitahaya Orgánica<br>del Perú</h1>
+    <p style="margin-top:18px; font-size:1.05rem;">Sabor auténtico, origen certificado, bienestar natural.</p>
+    <a href="{{ url_for('productos') }}" style="display:inline-block;margin-top:30px;background:#e0006e;color:#fff;padding:14px 34px;border-radius:8px;font-weight:700;text-decoration:none;font-size:0.95rem;letter-spacing:1px;">
+      Ver Productos
+    </a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="padding:70px 40px;text-align:center;background:#fff;">
+  <p class="section-eyebrow">¿Quiénes somos?</p>
+  <h2 class="section-title reveal">La mejor pitahaya orgánica,<br>directo del campo al mundo</h2>
+  <p style="max-width:600px;margin:0 auto;color:#666;line-height:1.8;font-size:0.95rem;" class="reveal">
+    Tuta Wayta nace de la pasión por el agro peruano. Producimos y comercializamos pitahaya orgánica con los más altos estándares de calidad, apoyando a comunidades locales y cuidando el medio ambiente.
+  </p>
+</section>
+
+<!-- PRODUCTOS DESTACADOS -->
+<section style="padding:60px 40px 80px;background:var(--light-bg);text-align:center;">
+  <p class="section-eyebrow">Lo más pedido</p>
+  <h2 class="section-title reveal">Productos Destacados</h2>
+  <div class="productos-grid" style="margin-top:30px;">
+    <div class="product-card reveal">
+      <img src="{{ url_for('static', filename='img/Pitahaya_Fresca.png') }}" alt="Pitahaya Fresca"/>
+      <div class="product-info">
+        <h3>Pitahaya Fresca</h3>
+        <p>Cosechada en su punto exacto de madurez para máximo sabor y nutrición.</p>
+        <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <img src="{{ url_for('static', filename='img/Mermelada.png') }}" alt="Mermelada"/>
+      <div class="product-info">
+        <h3>Mermelada Artesanal</h3>
+        <p>Elaborada sin conservantes, con pitahaya orgánica 100% peruana.</p>
+        <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <img src="{{ url_for('static', filename='img/Yogurt.png') }}" alt="Yogurt"/>
+      <div class="product-info">
+        <h3>Yogurt de Pitahaya</h3>
+        <p>Cremoso, natural y lleno del sabor único de nuestra pitahaya.</p>
+        <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+      </div>
+    </div>
+  </div>
+  <a href="{{ url_for('productos') }}" style="display:inline-block;margin-top:10px;border:2px solid var(--magenta);color:var(--magenta);padding:12px 30px;border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.2s;">
+    Ver catálogo completo →
+  </a>
+</section>
+
+{% endblock %}

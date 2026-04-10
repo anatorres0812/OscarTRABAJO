@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Tuta Wayta – Nosotros{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Nosotros</h1>
+    <p>Cultivando el futuro de la pitahaya orgánica con raíces de tradición y excelencia.</p>
+  </div>
+</section>
+
+<!-- PILARES -->
+<section class="pilares">
+  <p class="section-eyebrow">Nuestros Pilares</p>
+  <div class="pilares-grid">
+    <div class="pilar-card white reveal">
+      <span class="pilar-icon">🕐</span>
+      <h3>Historia</h3>
+      <p>Nacimos del sueño de agricultores locales unidos para encontrar valor a la tierra y ofrecer un producto de clase mundial desde nuestras comunidades.</p>
+    </div>
+    <div class="pilar-card pink reveal">
+      <span class="pilar-icon">🚀</span>
+      <h3>Misión</h3>
+      <p>Liderar la producción de pitahaya orgánica con prácticas sostenibles que generen salud para el consumidor y bienestar para nuestros socios.</p>
+    </div>
+    <div class="pilar-card dark reveal">
+      <span class="pilar-icon">👁️</span>
+      <h3>Visión</h3>
+      <p>Ser el referente global de pitahaya premium peruana, reconocida por su origen auténtico, calidad certificada y respeto al medio ambiente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="valores">
+  <h2 class="section-title reveal">Nuestros Valores</h2>
+  <div class="valores-grid reveal">
+    <div class="valor-tag"><span class="vi">♻️</span> Sostenibilidad</div>
+    <div class="valor-tag"><span class="vi">🤝</span> Asociatividad</div>
+    <div class="valor-tag"><span class="vi">⭐</span> Calidad</div>
+    <div class="valor-tag"><span class="vi">❤️</span> Salud</div>
+    <div class="valor-tag"><span class="vi">📍</span> Origen</div>
+    <div class="valor-tag"><span class="vi">🌿</span> Orgánico</div>
+    <div class="valor-tag"><span class="vi">⚖️</span> Igualdad</div>
+    <div class="valor-tag"><span class="vi">📈</span> Crecimiento</div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="equipo">
+  <h2 class="section-title reveal">Equipo</h2>
+  <div class="equipo-grid">
+    <div class="miembro reveal">
+      <div class="miembro-photo-wrap">
+        <div class="miembro-bg">
+          <img src="{{ url_for('static', filename='img/pitahaya_American_beauty.png') }}" alt="bg"/>
+        </div>
+        <img class="miembro-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Kelly Maynard"/>
+      </div>
+      <h4>Kelly Maynard</h4>
+      <span class="role">Presidenta</span>
+      <p>Lidera con visión estratégica la Dirección Comercial en toda América.</p>
+    </div>
+    <div class="miembro reveal">
+      <div class="miembro-photo-wrap">
+        <div class="miembro-bg">
+          <img src="{{ url_for('static', filename='img/dragon-fruit-2343883_960_720.jpg') }}" alt="bg"/>
+        </div>
+        <img class="miembro-avatar" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Talia Rodríguez"/>
+      </div>
+      <h4>Talia Rodríguez</h4>
+      <span class="role">Vicepresidenta</span>
+      <p>Construye la calidad orgánica en campo y el vínculo con el cliente final.</p>
+    </div>
+    <div class="miembro reveal">
+      <div class="miembro-counter">
+        <span class="num">+30</span>
+        <span class="label">Integrantes</span>
+      </div>
+      <h4>Nuestra Familia</h4>
+      <span class="role">Equipo Interno</span>
+      <p>Socios y colaboradores que hacen posible el ecosistema cada día.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

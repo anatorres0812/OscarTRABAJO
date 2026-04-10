@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Tuta Wayta – Productos{% endblock %}
+
+{% block content %}
+
+<section class="productos-hero">
+  <p class="productos-eyebrow">Catálogo Orgánico</p>
+  <h1 class="productos-title">Nuestros <span>PRODUCTOS</span></h1>
+</section>
+
+<div class="productos-grid">
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/Pitahaya_Fresca.png') }}" alt="Pitahaya Fresca"/>
+    <div class="product-info">
+      <h3>Pitahaya Fresca</h3>
+      <p>Cosechada en su punto exacto de madurez para máximo sabor y nutrición.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/Mermelada.png') }}" alt="Mermelada"/>
+    <div class="product-info">
+      <h3>Mermelada Artesanal</h3>
+      <p>Elaborada sin conservantes, con pitahaya orgánica 100% peruana.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/MermeladaP.png') }}" alt="Mermelada Premium"/>
+    <div class="product-info">
+      <h3>Mermelada Premium</h3>
+      <p>Edición especial con mayor concentración de fruta y sabor intenso.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/Nectar_Natural.png') }}" alt="Néctar Natural"/>
+    <div class="product-info">
+      <h3>Néctar Natural</h3>
+      <p>Bebida refrescante con jugo puro de pitahaya, sin azúcar añadida.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/Pack_especial.png') }}" alt="Pack Especial"/>
+    <div class="product-info">
+      <h3>Pack Especial</h3>
+      <p>Combinación curada de nuestros mejores productos en una caja regalo.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/Pulpa_Deshidratante.png') }}" alt="Pulpa Deshidratada"/>
+    <div class="product-info">
+      <h3>Pulpa Deshidratada</h3>
+      <p>Concentrado de pitahaya para smoothies, postres y recetas saludables.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/Yogurt.png') }}" alt="Yogurt"/>
+    <div class="product-info">
+      <h3>Yogurt de Pitahaya</h3>
+      <p>Cremoso, natural y lleno del sabor único de nuestra pitahaya orgánica.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+  <div class="product-card reveal">
+    <img src="{{ url_for('static', filename='img/yogurt_de_pitahaya.png') }}" alt="Yogurt Premium"/>
+    <div class="product-info">
+      <h3>Yogurt Premium</h3>
+      <p>Con trozos reales de pitahaya fresca y sin colorantes artificiales.</p>
+      <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

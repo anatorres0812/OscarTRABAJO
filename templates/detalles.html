@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Tuta Wayta – Detalle Producto{% endblock %}
+
+{% block content %}
+
+<section style="max-width:1000px;margin:60px auto;padding:0 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+
+  <!-- Imagen -->
+  <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.1);">
+    <img src="{{ url_for('static', filename='img/Pitahaya_Fresca.png') }}" alt="Producto"
+         style="width:100%;height:420px;object-fit:cover;display:block;"/>
+  </div>
+
+  <!-- Info -->
+  <div>
+    <p style="font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--magenta);font-weight:700;margin-bottom:12px;">
+      Pitahaya Orgánica
+    </p>
+    <h1 style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--text);margin-bottom:16px;line-height:1.2;">
+      Pitahaya Fresca
+    </h1>
+    <p style="color:#666;line-height:1.75;font-size:0.95rem;margin-bottom:28px;">
+      Cultivada con técnicas orgánicas certificadas en los valles del Perú. Nuestra pitahaya fresca se cosecha en el punto exacto de madurez para garantizar el máximo sabor, aroma y valor nutricional. Rica en antioxidantes, vitamina C y fibra natural.
+    </p>
+
+    <!-- Características -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:30px;">
+      <div style="background:var(--light-bg);border-radius:10px;padding:14px 16px;">
+        <p style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Origen</p>
+        <p style="font-weight:700;font-size:0.9rem;margin-top:2px;">Perú</p>
+      </div>
+      <div style="background:var(--light-bg);border-radius:10px;padding:14px 16px;">
+        <p style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Certificación</p>
+        <p style="font-weight:700;font-size:0.9rem;margin-top:2px;">Orgánico 100%</p>
+      </div>
+      <div style="background:var(--light-bg);border-radius:10px;padding:14px 16px;">
+        <p style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Variedad</p>
+        <p style="font-weight:700;font-size:0.9rem;margin-top:2px;">American Beauty</p>
+      </div>
+      <div style="background:var(--light-bg);border-radius:10px;padding:14px 16px;">
+        <p style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Temporada</p>
+        <p style="font-weight:700;font-size:0.9rem;margin-top:2px;">Todo el año</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:12px;">
+      <button style="flex:1;background:var(--magenta);color:#fff;border:none;padding:14px;border-radius:8px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:background 0.2s;"
+              onmouseover="this.style.background='#b5005a'" onmouseout="this.style.background='#e0006e'">
+        Hacer Pedido
+      </button>
+      <a href="{{ url_for('productos') }}"
+         style="flex:1;border:2px solid var(--magenta);color:var(--magenta);padding:14px;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;text-align:center;transition:all 0.2s;"
+         onmouseover="this.style.background='#fff0f6'" onmouseout="this.style.background='transparent'">
+        ← Volver
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- Más productos -->
+<section style="background:var(--light-bg);padding:60px 40px;text-align:center;">
+  <h2 class="section-title reveal">También te puede interesar</h2>
+  <div class="productos-grid" style="margin-top:30px;">
+    <div class="product-card reveal">
+      <img src="{{ url_for('static', filename='img/Mermelada.png') }}" alt="Mermelada"/>
+      <div class="product-info">
+        <h3>Mermelada Artesanal</h3>
+        <p>Sin conservantes, con pitahaya 100% peruana.</p>
+        <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <img src="{{ url_for('static', filename='img/Nectar_Natural.png') }}" alt="Néctar"/>
+      <div class="product-info">
+        <h3>Néctar Natural</h3>
+        <p>Jugo puro de pitahaya, sin azúcar añadida.</p>
+        <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <img src="{{ url_for('static', filename='img/Pack_especial.png') }}" alt="Pack"/>
+      <div class="product-info">
+        <h3>Pack Especial</h3>
+        <p>Caja regalo con nuestros mejores productos.</p>
+        <a href="{{ url_for('detalles') }}" class="product-btn">Ver detalles</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
